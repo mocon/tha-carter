@@ -109,19 +109,57 @@ header button {
   padding: 6px 16px 8px;
   text-decoration: none;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+header button:focus {
+  outline: none;
+  border-color: #ED1C24;
 }
 
 header span {
   color: #ED1C24;
 }
 
-aside {
-
+.card {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
-aside.hidden {
+.card.shown {
+  background-color: rgba(0,0,0,0.5);
+  pointer-events: auto;
+}
+
+aside {
   opacity: 0;
   pointer-events: none;
+  transform: rotateY(180deg) rotateZ(12deg) scale(0.5);
+}
+
+.card.shown aside {
+  background-color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+  opacity: 1;
+  pointer-events: auto;
+  transform: rotateY(0deg) rotateZ(0deg) scale(1);
+  transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+aside a {
+  color: #ED1C24;
+  text-decoration: none;
 }
 
 @media (min-width: 640px) {

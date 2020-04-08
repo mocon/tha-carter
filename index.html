@@ -30,7 +30,7 @@
           </div>
         </div>
         <div>
-          <button>
+          <button onclick="document.getElementById('card').classList.toggle('shown')">
             contact me
           </button>
         </div>
@@ -42,12 +42,17 @@
 
     </section>
 
-    <aside class="hidden">
-      <p>scott carter</p>
-      <a href="tel:5027441313">502.744.1313</a>
-      <a href="mailto:scott@scottcarterdesign.com">scott@scottcarterdesign.com</a>
-      <a href="https://www.scottcarterdesign.com">scottcarterdesign.com</a>
-    </aside>
+    <div
+      id="card"
+      class="card"
+      onclick="document.getElementById('card').classList.toggle('shown')"
+    >
+      <aside>
+        <p><a href="tel:5027441313">502.744.1313</a></p>
+        <p><a href="mailto:scott@scottcarterdesign.com">scott@scottcarterdesign.com</a></p>
+        <p><a href="https://www.scottcarterdesign.com">scottcarterdesign.com</a></p>
+      </aside>
+    </div>
 
     <!-- Google Analytics: Change UA-XXXXX-Y to your site's ID. -->
     <script>
@@ -55,5 +60,6 @@
       ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
+
   </body>
 </html>
