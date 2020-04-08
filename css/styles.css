@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  background: #000000;
+  background: -moz-linear-gradient(top,  #000000 75%, #222222 100%);
+  background: -webkit-linear-gradient(top,  #000000 75%,#222222 100%);
+  background: linear-gradient(to bottom,  #000000 75%,#222222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#222222',GradientType=0 );
+}
+
+header {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header img {
+  margin: 0 auto;
+  width: 64px;
+}
+
+header h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  margin: -8px 0;
+}
+
+header p {
+  color: #787878;
+  letter-spacing: 0.08em;
+}
+
+header button {
+  color: #787878;
+  border: 1px solid #787878;
+  border-radius: 6px;
+  background: transparent;
+  padding: 6px 16px 8px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+header span {
+  color: #ED1C24;
+}
+
+aside {
+
+}
+
+aside.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header img {
+    margin: 0;
+  }
+
+  header .text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+section {
+  margin: 0 auto;
+  width: 960px;
+  max-width: 100%;
+}
+
+.embed {
+  --video--width: 970;
+  --video--height: 545;
+  position: relative;
+  padding-bottom: calc(var(--video--height) / var(--video--width) * 100%);
+  overflow: hidden;
+  max-width: 100%;
+  background: black;
+}
+
+.embed iframe,
+.embed object,
+.embed embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
