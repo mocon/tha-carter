@@ -67,6 +67,10 @@ select {
   }
 }
 
+html {
+  background: #000000;
+}
+
 body {
   font-family: 'Muli', sans-serif;
   background: #000000;
@@ -192,6 +196,24 @@ aside a {
   }
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  header {
+    height: 110px;
+  }
+
+  header img {
+    max-height: 110px;
+  }
+
+  header .text {
+    margin-top: 10px;
+  }
+}
+
 section {
   margin: 0 auto;
   width: 960px;
@@ -206,6 +228,7 @@ section {
   overflow: hidden;
   max-width: 100%;
   background: black;
+  margin-bottom: 16px;
 }
 
 .embed iframe,
