@@ -151,7 +151,6 @@ aside {
   background-color: white;
   padding: 32px;
   border-radius: 16px;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
   opacity: 1;
   pointer-events: auto;
   transform: rotateY(0deg) rotateZ(0deg) scale(1);
