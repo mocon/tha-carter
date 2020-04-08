@@ -131,6 +131,7 @@ header span {
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  transition: background-color 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .card.shown {
@@ -141,7 +142,9 @@ header span {
 aside {
   opacity: 0;
   pointer-events: none;
+  text-align: center;
   transform: rotateY(180deg) rotateZ(12deg) scale(0.5);
+  transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .card.shown aside {
@@ -152,9 +155,7 @@ aside {
   opacity: 1;
   pointer-events: auto;
   transform: rotateY(0deg) rotateZ(0deg) scale(1);
-  transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
   backface-visibility: hidden;
-  text-align: center;
 }
 
 aside a {
@@ -163,6 +164,10 @@ aside a {
 }
 
 @media (min-width: 640px) {
+  section {
+    padding: 0 16px;
+  }
+
   header {
     flex-direction: row;
     justify-content: space-between;
@@ -170,12 +175,20 @@ aside a {
   }
 
   header img {
-    margin: 0;
+    margin: 0 16px 0 0;
+  }
+
+  header .left {
+    display: flex;
   }
 
   header .text {
-    display: flex;
-    flex-direction: column;
+    text-align: left;
+    margin-top: -10px;
+  }
+
+  header button {
+    margin-top: 0;
   }
 }
 
